@@ -1,4 +1,4 @@
-import { ElMessage, ElMessageBox, ElNotification, ElLoading } from 'element-plus';
+import {ElLoading, ElMessage, ElMessageBox, ElNotification} from 'element-plus';
 
 let loadingInstance: ReturnType<typeof ElLoading.service>;
 
@@ -21,19 +21,19 @@ export default {
     },
     // 弹出提示
     alert(content: string) {
-        ElMessageBox.alert(content, '系统提示');
+        void ElMessageBox.alert(content, '系统提示');
     },
     // 错误提示
     alertError(content: string) {
-        ElMessageBox.alert(content, '系统提示', { type: 'error' });
+        void ElMessageBox.alert(content, '系统提示', {type: 'error'});
     },
     // 成功提示
     alertSuccess(content: string) {
-        ElMessageBox.alert(content, '系统提示', { type: 'success' });
+       void ElMessageBox.alert(content, '系统提示', {type: 'success'});
     },
     // 警告提示
     alertWarning(content: string) {
-        ElMessageBox.alert(content, '系统提示', { type: 'warning' });
+        void ElMessageBox.alert(content, '系统提示', {type: 'warning'});
     },
     // 通知提示
     notify(content: string) {
